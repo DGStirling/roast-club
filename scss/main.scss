@@ -1,0 +1,371 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Big Shoulders Display", cursive;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 20px;
+}
+img {
+  width: 100%;
+}
+
+.btn {
+  border: solid 3px #000;
+  padding: 0.75rem 1rem;
+  border-radius: 5px;
+}
+
+.section-heading {
+  text-align: center;
+  font-size: 40px;
+  padding: 30px 0;
+}
+
+.btn- {
+  &confirm {
+    background: green;
+  }
+
+  &cancel {
+    background: red;
+  }
+}
+
+.main-border-bottom {
+  border-bottom: #333 3px solid;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+#backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(51, 51, 51, 0.3);
+  z-index: 9;
+}
+
+#add-roast-screen {
+  position: fixed;
+  top: 5%;
+  left: 50%;
+  width: 700px;
+  margin-left: -350px;
+  background: #f4f4f4;
+  border: #000 solid 3px;
+  z-index: 10;
+
+  #new-roast-entry {
+    padding: 30px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > label {
+      text-align: center;
+      padding: 0.75rem;
+      font-size: 1.5rem;
+    }
+
+    > input {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+
+    > textarea {
+      padding: 15px;
+    }
+
+    .rating-items {
+      margin-bottom: 20px;
+      div {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5px 0;
+
+        > label {
+          display: inline-block;
+          width: 100px;
+        }
+        > input {
+          display: inline-block;
+          width: 60px;
+        }
+      }
+    }
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px 0;
+  }
+}
+
+.drop-screen {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.banner {
+  background: #fff;
+  width: 100%;
+
+  h1 {
+    font-family: "Big Shoulders Display", cursive;
+    text-align: center;
+    padding: 50px;
+    font-size: 3rem;
+  }
+
+  #nav-bar {
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 54px;
+
+      li {
+        list-style: none;
+
+        a {
+          border: #333 3px solid;
+          text-decoration: none;
+          color: #333;
+          font-size: 20px;
+          padding: 15px 30px;
+
+          &:hover {
+            cursor: pointer;
+            background: #333;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  #btn-add-roast {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    &:hover {
+      cursor: pointer;
+      background: #fff;
+      color: #333;
+    }
+  }
+}
+
+.info-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+
+  &:first-child {
+    border-bottom: rgba(51, 51, 51, 0.3) solid 1px;
+  }
+
+  .info-image {
+    padding: 20px 40px;
+    width: 500px;
+    overflow: hidden;
+    width: 30%;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .info-text {
+    width: 60%;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    h2 {
+      padding-bottom: 15px;
+    }
+  }
+}
+
+#roast-showcase {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    padding: 30px 0;
+  }
+
+  &:last-child {
+    border-top: rgba(51, 51, 51, 0.3) solid 1px;
+  }
+
+  .roast-entry-list {
+    .roast-entry {
+      border-top: rgba(51, 51, 51, 0.3) solid 1px;
+      padding: 30px;
+      max-width: 700px;
+      margin: auto;
+      display: flex;
+      height: 250px;
+
+      h3 {
+        text-align: center;
+        font-size: 30px;
+      }
+
+      p,
+      .star-rating {
+        display: block;
+        text-align: center;
+      }
+
+      &-image {
+        width: 40%;
+        border-radius: 5px;
+        object-fit: contain;
+      }
+
+      &-container {
+        width: 60%;
+
+        > * {
+          padding: 5px 0;
+        }
+      }
+
+      .city-pin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &:last-child {
+        border-bottom: rgba(51, 51, 51, 0.3) dashed 1px;
+      }
+    }
+  }
+}
+
+.see-more {
+  display: none;
+  margin: 30px auto;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+
+  &:hover {
+    background: #333;
+    color: #fff;
+  }
+}
+
+#roast-rules {
+  padding: 1rem 0;
+  p {
+    padding: 1rem 0;
+    max-width: 800px;
+    text-align: center;
+    margin: auto;
+  }
+
+  #rule-box {
+    margin-bottom: 1rem;
+    .rule-statement {
+      font-size: 30px;
+      &-yes {
+        color: green;
+      }
+
+      &-no {
+        color: red;
+      }
+    }
+  }
+}
+
+#footer {
+  width: 100%;
+  height: 80px;
+  background-color: #333;
+}
+
+/// Media Queries
+
+@media screen and (max-width: 380px) {
+  #btn-add-roast {
+    display: none;
+  }
+
+  .info-main {
+    flex-direction: column;
+    padding: 25px 0;
+    width: 100%;
+
+    .info-image {
+      padding: 15px 25px;
+      width: 100%;
+    }
+
+    .info-text {
+      padding: 15px 25px;
+      width: 100%;
+    }
+  }
+
+  .column-flip {
+    flex-direction: column-reverse;
+  }
+
+  .roast-entry-list {
+    .roast-entry {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      justify-content: center;
+
+      &-image {
+        display: none;
+      }
+      &-container {
+        width: 100% !important;
+      }
+
+      > * {
+        margin: auto;
+      }
+    }
+  }
+
+  #roast-rules {
+    padding: 0 25px;
+  }
+}

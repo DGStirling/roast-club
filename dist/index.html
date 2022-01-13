@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="app.js" defer></script>
+    <title>The Roast Club</title>
+  </head>
+  <body>
+    <div id="backdrop" class="drop-screen"></div>
+
+    <div id="add-roast-screen" class="drop-screen">
+      <form id="new-roast-entry">
+        <label for="">Restaurant / Pub</label>
+        <input
+          id="roast-venue"
+          type="text"
+          placeholder="The restaurant / pub..."
+        />
+        <label for="">City</label>
+        <input id="roast-location" type="text" placeholder="The city." />
+        <label for="">Image</label>
+        <input id="roast-img" type="text" placeholder="Image url link..." />
+        <label for="">Ratings</label>
+
+        <div class="rating-items" action="">
+          <div>
+            <label for="">Roast Potatoes</label>
+            <input
+              id="rating-potato"
+              class="item-rating"
+              type="number"
+              max="5"
+              min="0"
+              step="1"
+              placeholder="1-5"
+            />
+          </div>
+          <div>
+            <label for="">Gravy</label>
+            <input
+              id="rating-gravy"
+              class="item-rating"
+              type="number"
+              max="5"
+              min="0"
+              step="1"
+              placeholder="1-5"
+            />
+          </div>
+          <div>
+            <label for="">Portion Size</label>
+            <input
+              id="rating-portion"
+              class="item-rating"
+              type="number"
+              max="5"
+              min="0"
+              step="1"
+              placeholder="1-5"
+            />
+          </div>
+        </div>
+
+        <label for="">Comment</label>
+        <textarea
+          name=""
+          id="roast-comment"
+          cols="30"
+          rows="10"
+          maxlength="250"
+          placeholder="A short word about your roast"
+        ></textarea>
+      </form>
+      <div>
+        <a href="#" id="cancel-add-roast" class="btn btn-cancel">Cancel</a>
+        <a href="#" id="confirm-add-roast" class="btn btn-confirm">Confirm</a>
+      </div>
+    </div>
+
+    <header class="banner">
+      <a id="btn-add-roast" class="btn">Add Roast</a>
+      <h1>The Roast Club</h1>
+      <nav id="nav-bar" class="main-border-bottom">
+        <ul>
+          <li><a href="#info-main">Our Story</a></li>
+          <li><a href="#roast-showcase">Our Roasts</a></li>
+          <li><a href="#roast-rules">Our Rules</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="main-info" class="container main-border-bottom">
+      <div class="container info-main column-flip">
+        <div class="info-image">
+          <img src="images/roast1.jpg" alt="" />
+        </div>
+        <div class="info-text">
+          <h2>We are the roast club... (a.k.a. Papa Roast)</h2>
+          <p>
+            Hey! We are Sam and Martha, two bumbling idiots who love potatoes
+            and gravy. Sam loves gravy the most. He drinks it, bathes in it,
+            waters his flowers with it, and even does his laundry with it.
+            Martha on the other hand is nuts for potatoes. There isn't anything
+            potato-related that Martha doesnt like, be it new potatoes,
+            dauphinoise potatoes, Mr. Potato Head, Spud-nik, or a raw potato
+            sandwich. Anyway, I digress... Enjoy the Roast Club.
+          </p>
+        </div>
+      </div>
+
+      <div class="container info-main">
+        <div class="info-text">
+          <h2>We will judge you and your roast. We will not hold back!</h2>
+          <p>
+            Not only will we judge it, we will scorn it. We will tear your
+            pathetic attempt at a roast dinner to shreds and then we will eat it
+            shred by shred until we have a bowl of shreddies like your nanna
+            knitted. Then we will have if for breakfast the next day with a
+            glass of smooth Tropicana.
+          </p>
+        </div>
+        <div class="info-image">
+          <img src="images/roast2.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section id="roast-showcase" class="container main-border-bottom">
+      <h2 class="section-heading">The Roast List!</h2>
+      <div class="roast-entry-list">
+        <div class="roast-entry">
+          <div class="roast-entry-container">
+            <h3>The Punch Tavern</h3>
+            <div class="city-pin">
+              <h4><i class="fas fa-location"></i> Bristol</h4>
+            </div>
+            <p class="star-rating">5 / 5 stars</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              in voluptas non quod repellendus sit quo pariatur dignissimos unde
+              placeat? Nostrum consectetur possimus beatae culpa adipisci ut
+              debitis iusto nulla!
+            </p>
+          </div>
+          <img
+            class="roast-entry-image"
+            src="https://images.unsplash.com/photo-1641642585745-bf936f5799b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=986&q=80"
+            alt=""
+          />
+        </div>
+      </div>
+      <a href="#" class="btn see-more">See more...</a>
+    </section>
+
+    <section id="roast-rules" class="container">
+      <h2 class="section-heading">Rules of the Roast!</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
+        quibusdam ab impedit cupiditate voluptate omnis consequuntur,
+        exercitationem, veniam itaque maxime ducimus animi, quo doloribus
+        deserunt doloremque inventore quia dicta dolorem asperiores fugit
+        reiciendis dignissimos nam delectus. Corporis vitae quae delectus.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, sed
+        tempore. In fuga nesciunt possimus sit obcaecati provident sequi
+        consequuntur nisi distinctio veritatis. Eos id aliquid at deleniti qui
+        consectetur, in vel nisi repudiandae dolorum harum unde neque labore ab,
+        veniam saepe commodi odit. Saepe architecto mollitia nemo sed quia!
+      </p>
+
+      <div id="rule-box">
+        <div class="rule-statement">
+          <p class="rule-statement-yes">
+            <i class="fas fa-check"></i> Must have roast potatoes
+          </p>
+          <p class="rule-statement-yes">
+            <i class="fas fa-check"></i> Must including 'lashings' of gravy
+          </p>
+          <p class="rule-statement-yes">
+            <i class="fas fa-check"></i> Must have vegetarian option (including
+            gravy)
+          </p>
+
+          <p class="rule-statement-no">
+            <i class="fas fa-times"></i> No small portions
+          </p>
+          <p class="rule-statement-no">
+            <i class="fas fa-times"></i> No ketchup
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer"></footer>
+  </body>
+</html>
